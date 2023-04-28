@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "stdlib.h": "c",
+        "ogmcc.h": "c",
+        "stdarg.h": "c"
+    }
+}

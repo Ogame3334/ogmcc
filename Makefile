@@ -1,6 +1,11 @@
 CFLAGS=-std=c11 -g -static
+SRCS=$(wildcard *.c)
+OBJS=$(SRCS:.c=.o)
 
-ogmcc: ogmcc.c
+ogmcc: $(OBJS)
+		$(CC) -o ogmcc $(OBJS) $(LDFLAGS)
+
+$(OBJS): ogmcc.h
 
 test: ogmcc
 		./test.sh
